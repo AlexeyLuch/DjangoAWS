@@ -22,4 +22,9 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 urlpatterns = [
    url(r'^admin/', admin.site.urls),
    url(r'^', include('helloworld.urls')),
+  url('qwe/', include('poll.urls')),
+  url('jet/', include('jet.urls', 'jet')),
+   url('accounts/', include('allauth.urls')),
+   url('chat_channel/', include('chat_channel.urls')),
+   # path('ref_pages/', include('ref_pages.urls')),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
